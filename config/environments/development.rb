@@ -35,9 +35,9 @@ Retweeter::Application.configure do
   # Expands the lines which load the assets
   config.assets.debug = true
   Twitter.configure do |config|
-    config.consumer_key       = "PfXHZJgwDZ4GyJh1SqFGww"
-    config.consumer_secret    = "nPM0f4yzrRhcoARfKx51avJt2eGnBNdHptziuiCa5A"
-    config.oauth_token        = "27566332-ztu2AEoONw6aq3EurLGy6Njgqm0nrrIk2j1uwPKbo"
-    config.oauth_token_secret = "X5eIUPLEzYRiU4xWosWmrpV1cbxGc3vaR6WOpvyygjU"
+    config.consumer_key       = ENV['consumer_key']
+    config.consumer_secret    = ENV['consumer_secret']
+    config.oauth_token        = ENV['oauth_token']
+    config.oauth_token_secret = ENV['oauth_token_secret']
   end
 end
