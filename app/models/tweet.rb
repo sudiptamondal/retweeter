@@ -24,7 +24,7 @@ class Tweet < ActiveRecord::Base
         puts "Adding a new tweet"
         Tweet.create(:tweet_id=>tweet.attrs[:id_str], :tweet_text=>tweet.attrs[:text], :tweeted_at => tweet.attrs[:created_at])
         puts "::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::"
-        tweet_text = "RT @delhianimeclub " + tweet.attrs[:text]
+        tweet_text = ("RT @delhianimeclub " + tweet.attrs[:text]).slice(0..139)
         Twitter.update(tweet_text)
       else
         puts "::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::"
