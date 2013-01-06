@@ -1,3 +1,4 @@
 Retweeter::Application.routes.draw do
-  match ":action" => 'static#:action'
+  root :to => 'static#home'
+  match ":action"  => 'static#:action'
 end

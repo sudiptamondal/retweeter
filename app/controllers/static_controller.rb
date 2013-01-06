@@ -1,5 +1,8 @@
 class StaticController < ApplicationController
-  def status
+  def retweets
     @tweets = Tweet.all
+  end
+  def home
+    
   end
 end

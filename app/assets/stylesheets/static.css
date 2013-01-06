@@ -48,3 +48,10 @@ footer {
 .tweet_text {
   width: 84%;
 }
+.home_container {
+  margin: 0 auto;
+  position: absolute;
+  text-align: center;
+  top: 30%;
+  width: 100%;
+}
