@@ -12,6 +12,7 @@
   width: 85%;
   border: 1px solid pink;
   border-radius: 10px;
+  overflow-x:hidden;
 }
 .retweets li {
   padding-bottom: 2px;
@@ -43,4 +44,7 @@ footer {
 }
 .dark-white {
   color:#b5b5b5
+}
+.tweet_text {
+  width: 84%;
 }

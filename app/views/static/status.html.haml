@@ -21,11 +21,11 @@
         %li.darkblue
           .white="#{tweet.tweeted_at.strftime('%I:%M %p %d %b, %y')}"
           .space
-          .dark-white="RT @delhianimeclub: #{tweet.tweet_text}".html_safe unless tweet.tweet_text.blank?
+          .dark-white.tweet_text="RT @delhianimeclub: #{tweet.tweet_text}".html_safe unless tweet.tweet_text.blank?
       - else
         %li.black
           .dark-white="#{tweet.tweeted_at.strftime('%I:%M %p %d %b, %y')}"
           .space
-          .white=" RT @delhianimeclub: #{tweet.tweet_text}".html_safe unless tweet.tweet_text.blank?
+          .white.tweet_text=" RT @delhianimeclub: #{tweet.tweet_text}".html_safe unless tweet.tweet_text.blank?
   %footer
     %p &copy; Cloud
