@@ -16,5 +16,9 @@
   %h4="Here goes nothing..."
   %p="Lets begin now"
   %p=#@a
+  %ul
+    - @tweets.each do |tweet|
+      %li
+        = tweet.text
   %footer
     %p &copy; Cloud
