@@ -1,4 +1,4 @@
-source 'https://rubygems.org'
+source 'http  ://rubygems.org'
 
 gem 'rails', '3.2.9'
 group :development do 
@@ -17,4 +17,5 @@ gem 'twitter'
 gem 'libv8'
 gem 'jquery-rails'
 gem 'rufus-scheduler'
+gem 'taps'
 gem 'pg'

@@ -13,11 +13,19 @@
           %li= link_to "Link 3", "/path3"
 .container
   .vertical_space_50
-  %h4="Here goes nothing..."
-  %p="Lets begin now"
-  %p=#@a
-  %ul
-    - @tweets.each do |tweet|
-      %li= tweet.tweet_text unless tweet.tweet_text.blank?
+  %h4="The tweets retweeted of @delhianimeclub by @sudipto05"
+
+  %ul.retweets
+    - @tweets.each_with_index do |tweet, index|
+      - if (index%2 == 0)
+        %li.darkblue
+          .white="#{tweet.tweeted_at.strftime('%I:%M %p %d %b, %y')}"
+          .space
+          %span{:style=>"color:#b5b5b5"}=" RT @delhianimeclub: #{tweet.tweet_text}".html_safe unless tweet.tweet_text.blank?
+      - else
+        %li.black
+          %span{:style=>"color:#b5b5b5"}="#{tweet.tweeted_at.strftime('%I:%M %p %d %b, %y')}"
+          .space
+          .white=" RT @delhianimeclub: #{tweet.tweet_text}".html_safe unless tweet.tweet_text.blank?
   %footer
     %p &copy; Cloud
