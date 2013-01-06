@@ -18,7 +18,6 @@
   %p=#@a
   %ul
     - @tweets.each do |tweet|
-      %li
-        = tweet.text
+      %li= tweet.tweet_text unless tweet.tweet_text.blank?
   %footer
     %p &copy; Cloud
