@@ -14,7 +14,11 @@
   border-radius: 10px;
 }
 .retweets li {
-  padding-bottom: 2px;padding-left: 8px;padding-top: 2px;
+  padding-bottom: 2px;
+  padding-left: 8px;
+  padding-top: 2px;
+  float: left;
+  width: 100%;
 }
 .retweets li * {
   float: left;
@@ -36,4 +40,7 @@ footer {
 }
 .black {
   background-color: black;
+}
+.dark-white {
+  color:#b5b5b5
 }
